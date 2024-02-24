@@ -51,7 +51,7 @@ const Bike = ({ bike }) => {
         IQLAS's {bike.categories[0].name}
       </h5>
       <h4 className='mb-1'>{bike.name}</h4>
-      <div className='text-lg font-bold text-[#E4E3D6]'>RM{bike.price}</div>
+      <div className='text-lg font-bold text-[#E4E3D6]'>RM {bike.price}</div>
     </div>
   );
 };

@@ -45,7 +45,7 @@ const CartSidebar = () => {
           <div>
             <div className='flex justify-between font-semibold'>
               <div className='uppercase mb-5'>Total</div>
-              <div>${totalPrice}</div>
+              <div>RM {totalPrice}</div>
             </div>
             <CheckoutBtn />
           </div>

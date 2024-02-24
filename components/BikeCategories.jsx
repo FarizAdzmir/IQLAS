@@ -44,23 +44,23 @@ const BikeCategories = ({ bikes }) => {
                 <RadioGroupItem
                   value='essential'
                   id='essential'
-                  onClick={() => setCategory('essential')}
+                  onClick={() => setCategory('Essential')}
                 />
                 <label htmlFor='essential' className='text-[#E4E3D6]'>Essential</label>
               </div>
               <div className='flex items-center space-x-2'>
                 <RadioGroupItem
-                  value='perfumes'
-                  id='perfumes'
-                  onClick={() => setCategory('perfumes')}
+                  value='clothes'
+                  id='clothes'
+                  onClick={() => setCategory('Clothes')}
                 />
-                <label htmlFor='perfumes' className='text-[#E4E3D6]'>Perfumes</label>
+                <label htmlFor='clothes' className='text-[#E4E3D6]'>Clothes</label>
               </div>
               <div className='flex items-center space-x-2'>
                 <RadioGroupItem
                   value='food'
                   id='food'
-                  onClick={() => setCategory('food')}
+                  onClick={() => setCategory('Food')}
                 />
                 <label htmlFor='food' className='text-[#E4E3D6]'>Food</label>
               </div>

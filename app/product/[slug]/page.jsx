@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 const getData = async (slug) => {
-  const query = `*[_type == 'product' && slug.current == '${slug}'][0] {
+  const query = `*[_type == 'product'] {
     _id,
     images,
     price,

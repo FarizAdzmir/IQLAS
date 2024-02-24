@@ -13,7 +13,7 @@ const epilogue = Epilogue({
 });
 
 export const metadata = {
-  title: 'IQLAS | Online Store',
+  title: 'IQLAS',
   description: 'Muslim Essential Store',
 };
 

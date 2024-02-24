@@ -4,7 +4,7 @@ import ImageUrlBuilder from '@sanity/image-url';
 export const client = createClient({
   projectId: '0glasetj',
   dataset: 'iqlas-store',
-  apiVersion: '2022-03-07',
+  apiVersion: '2024-02-25',
   useCdn: true,
 });
 

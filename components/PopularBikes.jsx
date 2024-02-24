@@ -29,7 +29,7 @@ const PopularBikes = async () => {
           Authentic Feelings Of Arab Gulf.
         </p>
         <PopularBikeCarousel bikes={bikes} />
-        <Link href='/our-bikes'>
+        <Link href='/our-products'>
           <button className='btn btn-accent mx-auto'>More Product</button>
         </Link>
       </div>

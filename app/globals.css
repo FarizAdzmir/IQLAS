@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply font-epilogue;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-5xl md:text-[80px] leading-none text-[#E0AF00];
+  }
+  h2 {
+    @apply text-[40px] text-accent;
+  }
+  h3 {
+    @apply text-[22px] text-white;
+  }
+  h4 {
+    @apply text-[18px] text-accent;
+  }
+  a {
+    @apply font-bold uppercase leading-none hover:text-accent transition-all duration-200;
+  }
+  .btn {
+    @apply flex justify-center items-center h-[50px] px-8 text-white font-semibold uppercase;
+  }
+  .btn-icon {
+    @apply flex justify-center items-center w-[50px] h-[50px] text-2xl text-white;
+  }
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-hover transition-all rounded-full;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover transition-all rounded-full;
+  }
+  .btn-white {
+    @apply bg-white hover:bg-white/90 text-primary rounded-full;
+  }
+}
+
+/* swiper styles */
+.popular-bike-slider .swiper-wrapper {
+  @apply !h-[500px];
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-accent;
+}

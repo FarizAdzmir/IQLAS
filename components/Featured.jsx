@@ -1,7 +1,7 @@
 import { PackageCheck, Headphones, ShieldCheck } from 'lucide-react';
 const Featured = () => {
   return (
-    <section className='pt-14 pb-14 bg-primary'>
+    <section className='pt-28 pb-14 bg-primary'>
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-8'>
           <div className='flex-1 flex flex-col items-center'>

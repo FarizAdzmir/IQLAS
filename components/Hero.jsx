@@ -2,8 +2,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Hero = () => {
+  // Correct path relative to the public directory
+  const backgroundImageUrl = '/hero/Desert.jpg';
+
   return (
-    <section className='py-48 md:py-0 md:h-[820px] relative overflow-hidden bg-primary '>
+    <section
+      className='py-48 md:py-0 md:h-[820px] relative overflow-hidden bg-primary'
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: 'cover', // Cover the entire section
+        backgroundPosition: 'center', // Center the background image
+      }}
+    >
       <div className='container mx-auto'>
         <div className='flex items-center justify-between'>
           {/* text */}
@@ -16,13 +26,13 @@ const Hero = () => {
               Explore our Premium Date Hub & Muslim Essentials Product
               for the finest dates and more.
             </p>
-            {/* btn group */}
+            {/* button group */}
             <div className='flex items-center gap-4 mx-auto xl:mx-0'>
-              <Link href='/our-bikes' className='mx-auto md:mx-0'>
-                <button className='btn btn-accent'>Shop now</button>
+              <Link href='/our-bikes' className='btn btn-accent'>
+                Shop now
               </Link>
-              <Link href='/our-bikes' className='mx-auto md:mx-0'>
-                <button className='btn btn-primary'>Our Products</button>
+              <Link href='/our-bikes' className='btn btn-primary'>
+                Our Products
               </Link>
             </div>
           </div>
@@ -30,9 +40,9 @@ const Hero = () => {
           <div className='hidden xl:flex'>
             <Image
               src='/hero/hero.png'
-              width={612}
-              height={384}
-              alt=''
+              width={612} // Adjusted width
+              height={384} // Adjusted height
+              alt='Hero Image'
               quality={100}
             />
           </div>

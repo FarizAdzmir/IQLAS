@@ -21,7 +21,7 @@ const Hero = () => {
             <h1 className='text-center xl:text-left mb-6'>
               Muslim <span>Essential</span> Store
             </h1>
-            <p className='mb-10 text-lg max-w-[508px] mx-auto text-center text-[#9BA19D] xl:text-left xl:mx-0'>
+            <p className='mb-10 text-lg max-w-[508px] mx-auto text-center text-white xl:text-left xl:mx-0'>
               Welcome to IQLAS Online Store.
               Explore our Premium Date Hub & Muslim Essentials Product
               for the finest dates and more.

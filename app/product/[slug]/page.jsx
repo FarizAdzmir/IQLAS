@@ -34,7 +34,7 @@ const ProductDetails = async ({ params }) => {
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-14'>
           {/* img */}
-          <div className='xl:flex-1 h-[460px] bg-extra/10 xl:w-[700px] xl:h-[540px] flex justify-center items-center rounded-3xl'>
+          <div className='xl:flex-1 h-[460px] bg-extra-hover xl:w-[700px] xl:h-[540px] flex justify-center items-center rounded-3xl'>
             <Image
               src={urlFor(iqlas.images[0]).url()}
               width={473}

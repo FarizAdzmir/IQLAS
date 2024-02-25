@@ -34,7 +34,7 @@ module.exports = {
         },
         extra: {
           DEFAULT: "#E4E3D6",
-          hover: "#FEFEFE",
+          hover: "#1F1F1F",
         },
       },
       keyframes: {

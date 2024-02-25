@@ -1,5 +1,5 @@
 'use client';
-import Bike from './Bike';
+import Product from './Product';
 
 // import swiper react components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-const PopularBikeCarousel = ({ bikes }) => {
+const PopularProductCarousel = ({ products }) => {
   return (
     <Swiper
       slidesPerView={1}
@@ -26,12 +26,12 @@ const PopularBikeCarousel = ({ bikes }) => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className='popular-bike-slider mb-8'
+      className='popular-product-slider mb-8'
     >
-      {bikes.map((bike) => {
+      {products.map((product) => {
         return (
-          <SwiperSlide key={bike._id}>
-            <Bike bike={bike} />
+          <SwiperSlide key={product._id}>
+            <Product product={product} />
           </SwiperSlide>
         );
       })}
@@ -39,4 +39,4 @@ const PopularBikeCarousel = ({ bikes }) => {
   );
 };
 
-export default PopularBikeCarousel;
+export default PopularProductCarousel;

@@ -4,7 +4,7 @@ import AddToCartBtn from '@/components/AddToCartBtn';
 import Link from 'next/link';
 
 import {
-  Bike,
+  Shield,
   Clock,
   PackageCheck,
   RefreshCw,
@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 const getData = async (slug) => {
-  const query = `*[_type == 'product'] {
+  const query = `*[_type == 'product' && slug.current == '${slug}'][0] {
     _id,
     images,
     price,
@@ -27,16 +27,16 @@ const getData = async (slug) => {
 };
 
 const ProductDetails = async ({ params }) => {
-  const bike = await getData(params.slug);
-  console.log(bike);
+  const iqlas = await getData(params.slug);
+  console.log(iqlas);
   return (
     <section className='pt-24 pb-32 bg-primary'>
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-14'>
           {/* img */}
-          <div className='xl:flex-1 h-[460px] bg-primary/5 xl:w-[700px] xl:h-[540px] flex justify-center items-center'>
+          <div className='xl:flex-1 h-[460px] bg-extra/10 xl:w-[700px] xl:h-[540px] flex justify-center items-center rounded-3xl'>
             <Image
-              src={urlFor(bike.images[0]).url()}
+              src={urlFor(iqlas.images[0]).url()}
               width={473}
               height={290}
               priority
@@ -51,17 +51,17 @@ const ProductDetails = async ({ params }) => {
             </Link>
             <div className='flex flex-col gap-6 items-start'>
               <div>
-                <h3>{bike.name}</h3>
-                <p className='text-lg font-semibold text-accent'>RM {bike.price}</p>
+                <h3 className='text-accent'>{iqlas.name}</h3>
+                <p className='text-lg font-semibold text-extra'>RM {iqlas.price}</p>
               </div>
-              <p className='text-[#E4E3D6]'>{bike.description}</p>
+              <p className='text-extra/70'>{iqlas.description}</p>
               <AddToCartBtn
-                price_id={bike.price_id}
-                name={bike.name}
+                price_id={iqlas.price_id}
+                name={iqlas.name}
                 currency='MYR'
-                description={bike.description}
-                images={bike.images}
-                price={bike.price}
+                description={iqlas.description}
+                images={iqlas.images}
+                price={iqlas.price}
                 text='Add to cart'
                 btnStyles='btn btn-accent'
               />
@@ -70,22 +70,21 @@ const ProductDetails = async ({ params }) => {
             <div className='flex flex-col gap-3'>
               <div className='flex gap-2'>
                 <PackageCheck size={20} className='text-accent' />
-                <p className='text-[#E4E3D6]'>Free shipping on orders over $130</p>
+                <p className='text-extra'>Free shipping on orders over RM 120</p>
               </div>
               <div className='flex gap-2'>
                 <RefreshCw size={20} className='text-accent' />
-                <p className='text-[#E4E3D6]'>Free return for 30 days</p>
+                <p className='text-extra'>Free return for 30 days</p>
               </div>
-              <div className='flex gap-2'>
-                <Bike size={20} className='text-accent' />
-                <p className='text-[#E4E3D6]'>
-                  The bicycles are partially assembled and benefit from
-                  transport insurance
+              {/* <div className='flex gap-2'>
+                <Shield size={20} className='text-accent' />
+                <p>
+                  Extra
                 </p>
-              </div>
+                  </div> */}
               <div className='flex gap-2'>
                 <Clock size={20} className='text-accent' />
-                <p className='text-[#E4E3D6]'>Fast delivery</p>
+                <p className='text-extra'>Fast delivery</p>
               </div>
             </div>
           </div>

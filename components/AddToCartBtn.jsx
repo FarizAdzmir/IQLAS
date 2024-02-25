@@ -18,7 +18,7 @@ const AddToCartBtn = ({
   const { addItem } = useShoppingCart();
   const { toast } = useToast();
 
-  const bike = {
+  const product = {
     id: id,
     currency: currency,
     name: name,
@@ -32,7 +32,7 @@ const AddToCartBtn = ({
     <button
       className={`${btnStyles}`}
       onClick={() => {
-        addItem(bike);
+        addItem(product);
         toast({
           title: `${name} has been added to the cart`,
         });

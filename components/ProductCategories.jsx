@@ -3,24 +3,24 @@ import { useState, useEffect } from 'react';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from './ui/label';
 import { Slider } from './ui/slider';
-import Bike from './Bike';
+import Product from './Product';
 
-const BikeCategories = ({ bikes }) => {
+const ProductCategories = ({ products }) => {
   const [category, setCategory] = useState('all');
-  const [filteredBikes, setFilteredBikes] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [price, setPrice] = useState(900);
 
   useEffect(() => {
-    const filtered = bikes.filter((bike) => {
+    const filtered = products.filter((product) => {
       const categoryMatch =
         category === 'all'
-          ? bikes
-          : bike.categories.some((categ) => categ.name === category);
-      const priceMatch = bike.price <= price;
+          ? products
+          : product.categories.some((categ) => categ.name === category);
+      const priceMatch = product.price <= price;
       return categoryMatch && priceMatch;
     });
-    setFilteredBikes(filtered);
-  }, [category, price, bikes]);
+    setFilteredProducts(filtered);
+  }, [category, price, products]);
 
   return (
     <section className='min-h-[1200px] py-10 bg-primary'>
@@ -72,11 +72,11 @@ const BikeCategories = ({ bikes }) => {
                 <span className='text-accent font-semibold ml-2'>RM{price}</span>
                 <span className='ml-2'>
                   (
-                  {filteredBikes.length > 1
-                    ? `${filteredBikes.length} items`
-                    : filteredBikes === 0
-                    ? `${filteredBikes.length} items`
-                    : `${filteredBikes.length} item`}
+                  {filteredProducts.length > 1
+                    ? `${filteredProducts.length} items`
+                    : filteredProducts === 0
+                    ? `${filteredProducts.length} items`
+                    : `${filteredProducts.length} item`}
                   )
                 </span>
               </div>
@@ -88,11 +88,11 @@ const BikeCategories = ({ bikes }) => {
               />
             </div>
           </aside>
-          {/* bike list */}
+          {/* Product list */}
           <div className='w-full xl:w-[1050px] ml-auto'>
             <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]'>
-              {filteredBikes.map((bike) => {
-                return <Bike bike={bike} key={bike.price_id} />;
+              {filteredProducts.map((product) => {
+                return <Product product={product} key={product.price_id} />;
               })}
             </div>
           </div>
@@ -102,4 +102,4 @@ const BikeCategories = ({ bikes }) => {
   );
 };
 
-export default BikeCategories;
+export default ProductCategories;

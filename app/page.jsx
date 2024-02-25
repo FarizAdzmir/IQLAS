@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero';
-import PopularBikes from '@/components/PopularBikes';
+import PopularProducts from '@/components/PopularProducts';
 import Featured from '@/components/Featured';
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <Featured />
-      <PopularBikes />
+      <PopularProducts />
     </main>
   );
 }

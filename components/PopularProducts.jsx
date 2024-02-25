@@ -1,6 +1,6 @@
 import { client } from '@/app/lib/sanity';
 import Link from 'next/link';
-import PopularBikeCarousel from './PopularBikeCarousel';
+import PopularProductCarousel from './PopularProductCarousel';
 
 // get data
 const getData = async () => {
@@ -19,8 +19,8 @@ const getData = async () => {
   return data;
 };
 
-const PopularBikes = async () => {
-  const bikes = await getData();
+const PopularProducts = async () => {
+  const products = await getData();
   return (
     <section className='py-24 bg-primary'>
       <div className='container mx-auto'>
@@ -28,7 +28,7 @@ const PopularBikes = async () => {
         <p className='text-center text-[#E4E3D6] mb-[30px]'>
           Authentic Feelings Of Arab Gulf.
         </p>
-        <PopularBikeCarousel bikes={bikes} />
+        <PopularProductCarousel products={products} />
         <Link href='/our-products'>
           <button className='btn btn-accent mx-auto'>More Product</button>
         </Link>
@@ -37,4 +37,4 @@ const PopularBikes = async () => {
   );
 };
 
-export default PopularBikes;
+export default PopularProducts;

@@ -28,10 +28,10 @@ const Hero = () => {
             </p>
             {/* button group */}
             <div className='flex items-center gap-4 mx-auto xl:mx-0'>
-              <Link href='/our-bikes' className='btn btn-accent'>
+              <Link href='/our-products' className='btn btn-accent'>
                 Shop now
               </Link>
-              <Link href='/our-bikes' className='btn btn-primary'>
+              <Link href='/our-products' className='btn btn-primary'>
                 Our Products
               </Link>
             </div>

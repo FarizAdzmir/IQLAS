@@ -18,7 +18,7 @@ const Hero = () => {
         <div className='flex items-center justify-between'>
           {/* text */}
           <div className='w-full xl:max-w-[580px] md:h-[820px] flex flex-col justify-center items-start'>
-            <h1 className='text-center xl:text-left mb-6'>
+            <h1 className='text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-senior xl:text-left mb-6'>
               Muslim <span>Essential</span> Store
             </h1>
             <p className='mb-10 text-lg max-w-[508px] mx-auto text-center text-white xl:text-left xl:mx-0'>

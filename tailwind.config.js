@@ -36,6 +36,10 @@ module.exports = {
           DEFAULT: "#E4E3D6",
           hover: "#1F1F1F",
         },
+        senior: {
+          DEFAULT: "#B65B1A",
+          hover: "#C1752A",
+        },
       },
       keyframes: {
         "accordion-down": {

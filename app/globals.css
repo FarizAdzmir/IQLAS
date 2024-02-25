@@ -47,6 +47,9 @@
   .btn-white {
     @apply bg-white hover:bg-white/90 text-primary rounded-full;
   }
+  .btn-gold {
+    @apply bg-accent hover:bg-accent-hover transition-all rounded-full;
+  }
 }
 
 /* swiper styles */

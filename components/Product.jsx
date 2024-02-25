@@ -14,7 +14,7 @@ const Product = ({ product }) => {
   return (
     <div className='group'>
       <div className='border border-[#171717] h-[328px] mb-5 p-4 overflow-hidden relative rounded-3xl'>
-        <div className='bg-[#171717] rounded-2xl w-full h-full group-hover:bg-primary/10 transition-all duration-300 flex justify-center items-center'>
+        <div className='bg-[#171717] rounded-2xl w-full h-full group-hover:bg-extra/20 transition-all duration-300 flex justify-center items-center'>
           {/* badge */}
           {popularProductCat && (
             <div className='absolute top-8 left-8 bg-accent text-white px-3 text-sm uppercase font-medium rounded-md'>
@@ -48,7 +48,7 @@ const Product = ({ product }) => {
         </div>
       </div>
       <h5 className='text-[#E4E3D6] font-semibold mb-2'>
-        IQLAS's {product.categories[0].name}
+        {/* IQLAS's */} {product.categories[0].name}
       </h5>
       <h4 className='mb-1'>{product.name}</h4>
       <div className='text-lg font-bold text-[#E4E3D6]'>RM {product.price}</div>

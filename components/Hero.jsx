@@ -31,9 +31,9 @@ const Hero = () => {
               <Link href='/our-products' className='btn btn-accent'>
                 Shop now
               </Link>
-              <Link href='/our-products' className='btn btn-primary'>
+              {/*<Link href='/our-products' className='btn btn-primary'>
                 Our Products
-              </Link>
+              </Link>*/}
             </div>
           </div>
           {/* img */}

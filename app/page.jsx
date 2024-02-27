@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import PopularProducts from '@/components/PopularProducts';
 // import Featured from '@/components/Featured';
 import About from '@/components/About';
-import Join from '@/components/Join';
+import Order from '@/components/Order';
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       {/*<Featured /> */}
       <PopularProducts />
       <About />
-      <Join />
+      <Order />
     </main>
   );
 }

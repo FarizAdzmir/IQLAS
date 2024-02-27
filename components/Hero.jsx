@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Hero = () => {
   // Correct path relative to the public directory
-  const backgroundImageUrl = '/hero/Desert.jpg';
+  const backgroundImageUrl = '/images/Desert.webp';
 
   return (
     <section
@@ -28,7 +28,7 @@ const Hero = () => {
             </p>
             {/* button group */}
             <div className='flex items-center gap-4 mx-auto xl:mx-0'>
-              <Link href='/our-products' className='btn btn-accent'>
+              <Link href='/our-products' className='btn btn-accent hover:text-white'>
                 Shop now
               </Link>
               {/*<Link href='/our-products' className='btn btn-primary'>

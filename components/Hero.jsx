@@ -6,6 +6,7 @@ import { fadeIn } from "../lib/variants";
 
 export default function Hero() {
   const backgroundImageUrl = '/images/Desert.webp';
+  const IQLASBox = '/images/IQLAS-Box.png';
   return (
     <section
     className='py-48 md:py-0 md:h-[820px] relative overflow-hidden bg-primary'
@@ -69,7 +70,7 @@ export default function Hero() {
             className="relative w-full h-full max-h-[50vh] md:max-w-[70vw] xl:max-w-[860px] xl:max-h-[542px] xl:absolute xl:-right-[100px] min-[1680px]:right-[120px] xl:top-48"
           >
             <Image
-              src={"/images/IQLAS-BOX.png"}
+              src={IQLASBox}
               fill
               alt=""
               style={{ objectFit: "contain" }}

@@ -1,17 +1,25 @@
+"use client";
+import React from "react";
 import Link from 'next/link';
 import { Input } from './ui/input';
+import { motion } from "framer-motion";
+import { fadeIn } from "../lib/variants";
 import {
   RiFacebookFill,
   RiInstagramFill,
   RiTwitterFill,
 } from 'react-icons/ri';
 
-const Footer = () => {
+const Order = () => {
 
   const backgroundImageUrl = '/images/Banner.webp'
   return (
-    <footer className='pt-12 xl:pt-24 bg-primary text-white text-center'>
-      <section
+    <section className='pt-12 xl:pt-24 bg-primary text-white text-center'>
+      <motion.div
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.6 }}
         className='container mx-auto pt-10 rounded-3xl'
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
@@ -50,9 +58,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </footer>
+      </motion.div>
+    </section>
   );
 };
 
-export default Footer;
+export default Order;

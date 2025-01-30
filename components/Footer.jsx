@@ -33,7 +33,7 @@ export default function Footer() {
               {/* phone */}
               <div className="flex items-center gap-x-[10px]">
                 <FaPhone className="text-accent"/>
-                <div className="font-medium text-extra">(123)456-7890</div>
+                <div className="font-medium text-extra">(123)456-789</div>
               </div>
               {/* email */}
               <div className="flex items-center gap-x-[10px]">
